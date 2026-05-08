@@ -1,0 +1,20 @@
+name: diffguard
+version: 1.0.0
+description: APM project for diffguard
+author: Kỳ
+targets:
+    - claude
+    - codex
+    - gemini
+dependencies:
+    apm: []
+    mcp:
+        - name: jupyter
+          registry: false
+          transport: http
+          url: http://127.0.0.1:4040/mcp
+includes: auto
+scripts: {}
+devDependencies:
+    apm:
+        - apcamargo/typst-skills/typst-author

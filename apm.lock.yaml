@@ -1,0 +1,23 @@
+lockfile_version: '1'
+generated_at: '2026-05-08T12:07:04.326219+00:00'
+apm_version: 0.12.4
+dependencies:
+- repo_url: apcamargo/typst-skills
+  host: github.com
+  resolved_commit: 2855d089f420ee7677ef2f504f4277e00535b9a3
+  virtual_path: typst-author
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/typst-author
+  - .claude/skills/typst-author
+  content_hash: sha256:91d43776f587a45757b520cbbe0daf32582b25fcc232fd48d5e222457aa178c6
+  is_dev: true
+mcp_servers:
+- jupyter
+mcp_configs:
+  jupyter:
+    name: jupyter
+    transport: http
+    registry: false
+    url: http://127.0.0.1:4040/mcp

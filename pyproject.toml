@@ -1,0 +1,25 @@
+[project]
+name = "diffguard"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Kỳ", email = "40734986+itskyf@users.noreply.github.com" }]
+dependencies = [
+  "diffusers[torch]>=0.37.1",
+  "gguf>=0.19.0",
+  "transformers>=5.8.0",
+]
+
+[project.scripts]
+diffguard = "diffguard:main"
+
+[dependency-groups]
+dev = [
+  "jupyter-collaboration>=4.3.0",
+  "jupyter-mcp-server>=1.0.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.11,<0.12.0"]
+build-backend = "uv_build"

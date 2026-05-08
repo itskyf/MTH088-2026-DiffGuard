@@ -1,0 +1,6 @@
+[tools]
+"github:microsoft/apm" = { version = "latest", postinstall = "apm install" }
+pitchfork = "latest"
+pixi = "latest"
+prek = { version = "latest", postinstall = "prek install" }
+typstyle = "latest"
