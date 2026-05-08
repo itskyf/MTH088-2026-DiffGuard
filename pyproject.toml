@@ -6,8 +6,10 @@ readme = "README.md"
 requires-python = ">=3.13"
 authors = [{ name = "Kỳ", email = "40734986+itskyf@users.noreply.github.com" }]
 dependencies = [
+  "aide",
   "diffusers[torch]>=0.37.1",
   "gguf>=0.19.0",
+  "spai",
   "transformers>=5.8.0",
 ]
 
@@ -23,3 +25,7 @@ dev = [
 [build-system]
 requires = ["uv_build>=0.11.11,<0.12.0"]
 build-backend = "uv_build"
+
+[tool.uv.sources]
+aide = { git = "https://github.com/itskyf/AIDE" }
+spai = { git = "https://github.com/itskyf/spai" }
