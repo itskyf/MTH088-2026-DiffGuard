@@ -10,6 +10,7 @@ fnox = "latest"
 pitchfork = "latest"
 pixi = "latest"
 prek = { version = "latest", postinstall = "prek install" }
+typst = "latest"
 typstyle = "latest"
 
 [tasks.jupyter-lab]

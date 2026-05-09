@@ -26,20 +26,21 @@ TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN \
 #v(2cm)
 
 #text(size: 20pt, weight: "bold")[
-  Tên đề tài
+  TODO
 ]
 
 #v(2cm)
 
 #text(size: 17pt)[
-  KHÓA LUẬN TỐT NGHIỆP CỬ NHÂN CNTT \
-  CHƯƠNG TRÌNH CHUẨN
+  Báo cáo bài tập thực nghiệm Gen-AI \
+  Môn: Toán cho trí tuệ nhân tạo nâng cao \
+  Chương trình đào tạo trình độ Thạc sĩ
 ]
 
 #v(2cm)
 
-*GIẢNG VIÊN HƯỚNG DẪN* \
-PGS.TS. Hoàng Văn C
+*GIẢNG VIÊN MÔN HỌC* \
+PGS. TS. Nguyễn Đình Thúc
 
 #v(1fr)
 
