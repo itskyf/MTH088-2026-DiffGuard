@@ -4,6 +4,7 @@
 
 - src/diffguard/...: repo-specific modules.
 - data/bronze/ntire/: raw NTIRE dataset.
+- data/bronze/z_image_turbo/: raw Z-Image-Turbo generated data.
 - data/artifacts/checkpoints/: checkpoints of AIDE and SPAI.
 
 ## Technical
