@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-05-09T01:25:25.143329+00:00'
+generated_at: '2026-05-09T02:45:43.331261+00:00'
 apm_version: 0.12.4
 dependencies:
 - repo_url: apcamargo/typst-skills
@@ -25,14 +25,18 @@ dependencies:
   - .claude/skills/jupyter-notebook
   content_hash: sha256:2a0e2f00be9b5988c6cbe05cefaf0306a1b366ba6ecdce5830d35812b5400692
 mcp_servers:
+- huggingface
 - jupyter
 mcp_configs:
+  huggingface:
+    name: huggingface
+    transport: http
+    registry: false
+    url: https://huggingface.co/mcp?login
   jupyter:
     name: jupyter
-    transport: http
-    env:
-      JUPYTER_TOKEN: ${JUPYTER_TOKEN}
+    transport: streamable-http
     registry: false
     headers:
-      Authorization: Bearer $JUPYTER_TOKEN
+      Authorization: Bearer ${JUPYTER_TOKEN}
     url: http://127.0.0.1:4040/mcp
