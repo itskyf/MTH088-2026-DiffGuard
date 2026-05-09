@@ -1,3 +1,6 @@
+#set heading(numbering: "1.")
+
+#include "00_cover.typ"
 #include "01_introduction.typ"
 #include "02_math_background.typ"
 #include "03_methodology.typ"
