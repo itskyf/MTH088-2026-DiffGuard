@@ -1,10 +1,5 @@
 = Giới thiệu
 
-== Sự bùng nổ của Generative AI và bài toán tin cậy dữ liệu
-Đặt vấn đề về việc các mô hình như Diffusion hay GAN (cụ thể là Z-Image-Turbo) đã xóa nhòa ranh giới thực-ảo.
+Khi mô hình sinh ảnh ngày càng tốt hơn, ta không thể chỉ dựa vào watermark hay biết trước ảnh được tạo từ generator nào. Trong thực tế, ảnh có thể bị nén, resize, crop hoặc mất hết metadata, nên cách phòng chống fake data cần dựa trực tiếp vào chính nội dung của ảnh. Bài lab này thử nghiệm mô hình sinh ảnh dạng Diffusion, cụ thể là Z-Image-Turbo, rồi dùng các bộ phát hiện bị động để kiểm tra xem ảnh sinh ra có thể bị nhận ra hay không.
 
-== Tại sao Watermarking không phải là "chìa khóa vạn năng"?
-Luận điểm chính là tính thực tế. Watermarking yêu cầu sự hợp tác từ phía generator (active approach), điều này bất khả thi với các model mã nguồn mở hoặc generator độc hại. Ngoài ra, các phép biến đổi ảnh (nén, crop) dễ dàng phá hủy watermark.
-
-== Hướng tiếp cận Passive Detection
-Khẳng định đây là giải pháp thực dụng nhất. Thay vì tìm dấu vết được "cài cắm", ta đi tìm những "bất biến thống kê" mà các mô hình toán học hiện nay chưa mô phỏng hoàn hảo được so với ảnh thực.
+Ý tưởng chính của báo cáo là xem ảnh thật và ảnh sinh ra như hai phân phối dữ liệu khác nhau, tạm viết là $P_"real"$ và $P_"real"$. Dù Diffusion học quá trình khử nhiễu để tạo ảnh rất giống thật, nó vẫn có thể để lại khác biệt nhỏ trong ở các thành phần vật lý nội tại của ảnh thật như tần số, độ mịn, nhiễu và cấu trúc ảnh. Vì vậy, báo cáo thử kết hợp các dấu hiệu cơ bản như entropy $H(x) = -sum p_i log p_i$, độ sắc nét, thành phần tần số cao với đặc trưng học sâu từ detector. Sau đó, thay vì tin tuyệt đối một phương pháp, báo cáo thử nghiệm ý tưởng dùng uncertainty và Test-Time Adaptation trên các ảnh khó.

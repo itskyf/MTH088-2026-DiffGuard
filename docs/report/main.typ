@@ -1,5 +1,9 @@
 #set heading(numbering: "1.")
+#set par(
+  justify: true,
+)
 
+// TODO: cam kết
 #include "00_cover.typ"
 #include "01_introduction.typ"
 #include "02_math_background.typ"
