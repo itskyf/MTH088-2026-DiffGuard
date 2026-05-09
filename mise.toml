@@ -1,6 +1,16 @@
+[env]
+_.fnox-env = { tools = true }
+
+[plugins]
+fnox-env = "https://github.com/jdx/mise-env-fnox"
+
 [tools]
+fnox = "latest"
 "github:microsoft/apm" = { version = "latest", postinstall = "apm install" }
 pitchfork = "latest"
 pixi = "latest"
 prek = { version = "latest", postinstall = "prek install" }
 typstyle = "latest"
+
+[tasks.jupyter-lab]
+run = "uv run jupyter lab --no-browser --port=4040 --IdentityProvider.token $JUPYTER_TOKEN"

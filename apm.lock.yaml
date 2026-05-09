@@ -1,10 +1,11 @@
 lockfile_version: '1'
-generated_at: '2026-05-08T12:07:04.326219+00:00'
+generated_at: '2026-05-09T01:25:25.143329+00:00'
 apm_version: 0.12.4
 dependencies:
 - repo_url: apcamargo/typst-skills
   host: github.com
   resolved_commit: 2855d089f420ee7677ef2f504f4277e00535b9a3
+  resolved_ref: 2855d089f420ee7677ef2f504f4277e00535b9a3
   virtual_path: typst-author
   is_virtual: true
   package_type: claude_skill
@@ -12,12 +13,26 @@ dependencies:
   - .agents/skills/typst-author
   - .claude/skills/typst-author
   content_hash: sha256:91d43776f587a45757b520cbbe0daf32582b25fcc232fd48d5e222457aa178c6
-  is_dev: true
+- repo_url: itskyf/zalo-photos-assignment-2026
+  host: github.com
+  resolved_commit: 6cabad445e485474e8a80e9fbc20b9a3c50cf0a9
+  resolved_ref: 6cabad445e485474e8a80e9fbc20b9a3c50cf0a9
+  virtual_path: skills/jupyter-notebook
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/jupyter-notebook
+  - .claude/skills/jupyter-notebook
+  content_hash: sha256:2a0e2f00be9b5988c6cbe05cefaf0306a1b366ba6ecdce5830d35812b5400692
 mcp_servers:
 - jupyter
 mcp_configs:
   jupyter:
     name: jupyter
     transport: http
+    env:
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN}
     registry: false
+    headers:
+      Authorization: Bearer $JUPYTER_TOKEN
     url: http://127.0.0.1:4040/mcp

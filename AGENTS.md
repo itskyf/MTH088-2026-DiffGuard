@@ -1,9 +1,16 @@
 # AGENTS.md
 
-## Context
+## Folder structure
 
-- NTIRE dataset in `/mnt/c/Users/itsky/Downloads/Math/data/`
-- All checkpoints in `/mnt/c/Users/itsky/Downloads/Math/checkpoints/`
+- src/diffguard/...: repo-specific modules.
+- data/bronze/ntire/: raw NTIRE dataset.
+- data/artifacts/checkpoints/: checkpoints of AIDE and SPAI.
+
+## Technical
+
+- Evaluate folder for generated data carefully: bronze, silver, or gold. Do not add another tier.
+- Use the appropriate agent skills for the task.
+- Python: use `uv run script.py`, `uv run -m ...`. Ask me if you need to modify the python packages.
 
 ## Code Convention
 

@@ -13,8 +13,13 @@ dependencies:
           registry: false
           transport: http
           url: http://127.0.0.1:4040/mcp
+          env:
+              JUPYTER_TOKEN: "${JUPYTER_TOKEN}"
+          headers:
+              Authorization: "Bearer $JUPYTER_TOKEN"
 includes: auto
 scripts: {}
 devDependencies:
     apm:
-        - apcamargo/typst-skills/typst-author
+        - apcamargo/typst-skills/typst-author#2855d089f420ee7677ef2f504f4277e00535b9a3
+        - itskyf/zalo-photos-assignment-2026/skills/jupyter-notebook#6cabad445e485474e8a80e9fbc20b9a3c50cf0a9

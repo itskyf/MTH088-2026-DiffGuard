@@ -13,9 +13,6 @@ dependencies = [
   "transformers>=5.8.0",
 ]
 
-[project.scripts]
-diffguard = "diffguard:main"
-
 [dependency-groups]
 dev = [
   "jupyter-collaboration>=4.3.0",

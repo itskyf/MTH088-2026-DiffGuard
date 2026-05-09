@@ -1,3 +1,0 @@
-[daemons.jupyter-lab]
-run = "uv run jupyter lab --no-browser --port=4040"
-mise = true
