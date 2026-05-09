@@ -17,7 +17,7 @@ $
   X_(t-1) = 1/sqrt(alpha_t) ( X_t - (1 - alpha_t)/sqrt(1 - overline(alpha)_t) epsilon_theta ) + sigma_q (t)z.
 $
 
-Theo bài toán tối ưu, phần học khử nhiễu là cực tiểu hóa loss kiểu dự đoán như $theta^* = min_theta cal(L)(theta)$. Nhưng với các mô hình mới như Z-Image-Turbo, quá trình này còn bị kéo bởi mục tiêu cực đại hóa phần thưởng: $E[sum_t gamma^t R(s_t, a_t)]$, trong đó reward là độ đẹp, độ giống thật, độ khớp prompt. Mô hình vừa học để khử nhiễu đúng, vừa học để "lừa mắt người" tốt hơn.
+Theo bài toán tối ưu, phần học khử nhiễu là cực tiểu hóa loss kiểu dự đoán như $theta^* = min_theta cal(L)(theta)$. Nhưng với các mô hình mới như Z-Image-Turbo @zimage2025, quá trình này còn bị kéo bởi mục tiêu cực đại hóa phần thưởng: $E[sum_t gamma^t R(s_t, a_t)]$, trong đó reward là độ đẹp, độ giống thật, độ khớp prompt. Mô hình vừa học để khử nhiễu đúng, vừa học để "lừa mắt người" tốt hơn.
 
 == Hướng phát hiện: tìm dấu vết ổn định của ảnh thật
 Ảnh thật và ảnh AI không hoàn toàn giống nhau về mặt thống kê. Vì vậy detector sẽ gán cho mỗi ảnh một điểm số $S(x)$: điểm càng cao thì ảnh có khả năng fake. Mỗi detector chịu trách nhiệm cho một nhóm đặc điểm khó giả của ảnh thật: phổ/tần số, nhiễu cảm biến, độ mịn, hoặc đặc trưng ngữ nghĩa sâu.

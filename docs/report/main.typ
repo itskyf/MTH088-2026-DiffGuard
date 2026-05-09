@@ -10,5 +10,6 @@
 #include "02_math_background.typ"
 #include "03_methodology.typ"
 #include "04_experiments.typ"
-#include "05_discussion.typ"
-#include "06_conclusion.typ"
+#include "05_conclusion.typ"
+
+#bibliography("references.yaml")

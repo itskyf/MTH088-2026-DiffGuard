@@ -1,0 +1,38 @@
+spai2025:
+  type: article
+  title: "Any-Resolution AI-Generated Image Detection by Spectral Learning"
+  author:
+    [
+      "Karageorgiou, Dimitrios",
+      "Papadopoulos, Symeon",
+      "Kompatsiaris, Ioannis",
+      "Gavves, Efstratios",
+    ]
+  parent:
+    title: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+  date: 2025
+
+aide2025:
+  type: article
+  title: "A Sanity Check for AI-generated Image Detection"
+  author:
+    [
+      "Yan, Shilin",
+      "Li, Ouxiang",
+      "Cai, Jiayin",
+      "Hao, Yanbin",
+      "Jiang, Xiaolong",
+      "Hu, Yao",
+      "Xie, Weidi",
+    ]
+  parent:
+    title: "International Conference on Learning Representations (ICLR)"
+  date: 2025
+
+zimage2025:
+  type: article
+  title: "Z-Image: An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer"
+  author: ["Z-Image Team"]
+  parent:
+    title: "arXiv preprint arXiv:2511.22699"
+  date: 2025
