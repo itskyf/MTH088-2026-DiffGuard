@@ -8,9 +8,11 @@ authors = [{ name = "Kỳ", email = "40734986+itskyf@users.noreply.github.com" }
 dependencies = [
   "aide",
   "diffusers[torch]>=0.37.1",
+  "fal-client>=1.0.0",
   "gguf>=0.19.0",
   "spai",
   "transformers>=5.8.0",
+  "typer>=0.25.1",
 ]
 
 [dependency-groups]

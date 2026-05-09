@@ -1,31 +1,7 @@
-= Introduction
-- Fake data, diffusion, need passive detection
-- Generalization under unseen generators
-
-= Mathematical Background
-- GenAI stochastic mapping
-- Diffusion forward/reverse
-- RL + reward post-training in Turbo diffusion
-
-= Methodology
-- Dataset: NTIRE + Z-Image generated probe set
-- Detectors: SPAI, AIDE
-- Proposed hybrid passive detector
-- Metrics
-
-= Experiments
-- Setup, hardware, prompts, inference
-- Quantitative results
-- TTA analysis
-- Handcrafted feature analysis
-
-= Discussion
-- Generalization
-- Failure cases
-- Why passive detection is hard
-- Semi-supervised/TTA extension
-
-= Proposed Fake Data Prevention System
-- Ensemble + uncertainty + quarantine + human review
-
-= Conclusion
+#include "01_introduction.typ"
+#include "02_math_background.typ"
+#include "03_methodology.typ"
+#include "04_experiments.typ"
+#include "05_discussion.typ"
+#include "06_proposed_system.typ"
+#include "07_conclusion.typ"
