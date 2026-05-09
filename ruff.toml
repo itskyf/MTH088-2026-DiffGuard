@@ -1,2 +1,9 @@
+fix = true
+
+[lint]
+select = [
+  "I",  # isort
+]
+
 [lint.pydocstyle]
 convention = "google"

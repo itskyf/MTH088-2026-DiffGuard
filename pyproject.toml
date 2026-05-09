@@ -10,6 +10,7 @@ dependencies = [
   "diffusers[torch]>=0.37.1",
   "fal-client>=1.0.0",
   "gguf>=0.19.0",
+  "pandas>=3.0.2",
   "spai",
   "transformers>=5.8.0",
   "typer>=0.25.1",
