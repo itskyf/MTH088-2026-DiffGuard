@@ -26,7 +26,7 @@ TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN \
 #v(2cm)
 
 #text(size: 20pt, weight: "bold")[
-  TODO
+  Phát hiện ảnh sinh bởi trí tuệ nhân tạo thông qua phân tích miền phổ và đặc trưng đa mức
 ]
 
 #v(2cm)

@@ -36,3 +36,11 @@ zimage2025:
   parent:
     title: "arXiv preprint arXiv:2511.22699"
   date: 2025
+
+ntire2026:
+  type: article
+  title: "NTIRE 2026 Challenge on Robust AI-Generated Image Detection in the Wild"
+  author: ["Gushchin, Aleksandr", "Abud, Khaled", "Shumitskaya, Ekaterina", "Filippov, Artem", "Bychkov, Georgii", "et al."]
+  parent:
+    title: "CVPR 2026 NTIRE Workshop Paper, Robust AI-Generated Image Detection Technical Report"
+  date: 2026

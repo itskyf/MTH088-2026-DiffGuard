@@ -176,8 +176,11 @@ def build_metrics_comparison(ntire: pd.DataFrame, zit: pd.DataFrame) -> pd.DataF
     return pd.DataFrame(rows)
 
 
-def _save_score_distribution(ntire: pd.DataFrame, output_path: Path) -> None:
-    """Save NTIRE score distributions split by detector and label."""
+def _save_score_distribution(
+    ntire: pd.DataFrame, zit: pd.DataFrame, output_dir: Path
+) -> None:
+    """Save NTIRE and Z-Image-Turbo score distributions separately."""
+    # NTIRE Plot
     fig, axes = plt.subplots(1, 2, figsize=(10, 4), sharey=True)
     for ax, detector, column in zip(
         axes, ["AIDE", "SPAI"], ["aide_score", "spai_score"]
@@ -186,13 +189,37 @@ def _save_score_distribution(ntire: pd.DataFrame, output_path: Path) -> None:
             subset = ntire.loc[ntire["label"] == label, column]
             ax.hist(subset, bins=40, density=True, alpha=0.55, color=color, label=name)
         ax.axvline(0.5, color="black", linestyle="--", linewidth=0.9)
-        ax.set_title(detector)
+        ax.set_title(f"{detector} (NTIRE)")
         ax.set_xlabel("Fake probability")
         ax.grid(alpha=0.2)
     axes[0].set_ylabel("Density")
     axes[1].legend(frameon=False)
     fig.tight_layout()
-    fig.savefig(output_path, format="svg")
+    fig.savefig(output_dir / "ntire_score_distribution.svg")
+    plt.close(fig)
+
+    # Z-Image-Turbo Plot
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4), sharey=True)
+    for ax, detector, column in zip(
+        axes, ["AIDE", "SPAI"], ["aide_score", "spai_score"]
+    ):
+        subset = zit[column]
+        ax.hist(
+            subset,
+            bins=40,
+            density=True,
+            alpha=0.55,
+            color="#C84630",
+            label="fake (Z-Image)",
+        )
+        ax.axvline(0.5, color="black", linestyle="--", linewidth=0.9)
+        ax.set_title(f"{detector} (Z-Image-Turbo)")
+        ax.set_xlabel("Fake probability")
+        ax.grid(alpha=0.2)
+    axes[0].set_ylabel("Density")
+    axes[1].legend(frameon=False)
+    fig.tight_layout()
+    fig.savefig(output_dir / "zit_score_distribution.svg")
     plt.close(fig)
 
 
@@ -368,7 +395,7 @@ def write_analysis_artifacts(repo_root: Path) -> dict[str, Path]:
     zit.to_csv(zit_path, index=False)
     metrics.to_csv(metrics_path, index=False)
 
-    _save_score_distribution(ntire, plots_dir / "score_distribution.svg")
+    _save_score_distribution(ntire, zit, plots_dir)
     _save_feature_boxplots(ntire, zit, plots_dir / "handcrafted_feature_boxplots.svg")
     _save_roc_comparison(ntire, plots_dir / "roc_comparison.svg")
     _save_uncertainty_proxy(
